@@ -12,7 +12,7 @@ import { Component, Input } from '@angular/core';
         aria-label="text">
         <span
          class="material-symbols-rounded text-gray-600 text-4xl" translate="no"
-         [ngClass]="{'text-black bg-slate-100 rounded-full': isSelected}"
+         [ngClass]="{'text-black bg-sky-100 rounded-full': isSelected}"
          >{{ icon }}</span>
       </button>
     </div>

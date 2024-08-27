@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-home-page',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrl: './home-page.component.css'
 })
 export class HomePageComponent {
+  constructor(private route: ActivatedRoute, private router: Router) {}
 
+  ngOnInit(): void {
+    this.route.queryParams.subscribe(params => {
+      const code = params['code'];
+      if (code) {
+        console.log('Code Captured:', code);
+      }
+    });
+  }
 }

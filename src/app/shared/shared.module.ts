@@ -10,6 +10,9 @@ import { Error404Component } from './pages/error404/error404.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    Error404Component
   ]
 })
 export class SharedModule { }

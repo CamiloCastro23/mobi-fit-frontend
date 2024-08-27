@@ -1,0 +1,24 @@
+<div class="flex flex-col relative overflow-y-auto border w-screen h-full md:w-20 border-r-slate-100 bg-white shadow-xl">
+  <!-- LOGO -->
+  <div class="flex h-16 py-4 shrink-0 justify-center mb-10">
+    <img class="h-12 w-auto" src="assets/mobi-logo.png" alt="Your Company">
+  </div>
+  <!-- MENU -->
+  <div class="flex py-4 px-5 shrink-0 justify-start md:justify-center">
+    <nav class="menu">
+      <ul>
+        <li *ngFor="let item of menuItems" class="flex items-center justify-start py-2" (click)="selectItem(item)">
+          <material-icon
+            [icon]="item.icon"
+            [routerLink]="item.url"
+            [text]="item.text"
+            [isSelected]="item === selectedItem">
+          </material-icon>
+        </li>
+        <div class="absolute bottom-0 flex items-center justify-start">
+          <material-icon icon="logout" [routerLink]="'logout'" text="Logout"></material-icon>
+        </div>
+      </ul>
+    </nav>
+  </div>
+</div>

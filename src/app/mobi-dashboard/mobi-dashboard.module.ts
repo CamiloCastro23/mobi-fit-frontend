@@ -10,6 +10,7 @@ import { WorkoutPageComponent } from './pages/workout-page/workout-page.componen
 import { TutorialPageComponent } from './pages/tutorial-page/tutorial-page.component';
 import { SupportPageComponent } from './pages/support-page/support-page.component';
 import { SettingsPageComponent } from './pages/settings-page/settings-page.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -25,7 +26,11 @@ import { SettingsPageComponent } from './pages/settings-page/settings-page.compo
   ],
   imports: [
     CommonModule,
-    MobiDashboardRoutingModule
+    MobiDashboardRoutingModule,
+    SharedModule
+  ],
+  exports: [
+    LayoutPageComponent
   ]
 })
 export class MobiDashboardModule { }

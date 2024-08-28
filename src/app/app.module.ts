@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { SharedModule } from './shared/shared.module';
 import { MobiDashboardModule } from './mobi-dashboard/mobi-dashboard.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { MobiDashboardModule } from './mobi-dashboard/mobi-dashboard.module';
     BrowserModule,
     AppRoutingModule,
     SharedModule,
-    MobiDashboardModule
+    MobiDashboardModule,
+    HttpClientModule
   ],
   providers: [
     provideAnimationsAsync()

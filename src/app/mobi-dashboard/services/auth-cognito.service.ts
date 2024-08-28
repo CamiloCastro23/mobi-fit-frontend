@@ -8,7 +8,6 @@ import { environment } from '../../../environments/environments';
 })
 export class AuthCognitoService {
 
-  // Utilizar las variables de entorno
   private clientId = environment.clientId;
   private redirectUri = environment.redirectUri;
   private tokenUrl = environment.tokenUrl;

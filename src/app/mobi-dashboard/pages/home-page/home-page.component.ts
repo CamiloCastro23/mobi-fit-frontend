@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthCognitoService } from '../../services/auth-cognito.service';
+import { environment } from '../../../../environments/environments';
 
 @Component({
   selector: 'app-home-page',
@@ -24,12 +25,12 @@ export class HomePageComponent {
             const idToken = response.id_token;
             const refreshToken = response.refresh_token;
 
-            console.log('Access Token:', accessToken);
-            console.log('ID Token:', idToken);
-            console.log('Refresh Token:', refreshToken);
+            localStorage.setItem('access_token', accessToken);
+            localStorage.setItem('id_token', idToken);
+            localStorage.setItem('refresh_token', refreshToken);
           },
           error: (error) => {
-            console.error('Error al obtener los tokens:', error);
+            window.location.href = environment.authUrl;
           }
         });
       }

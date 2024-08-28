@@ -1,15 +1,17 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from '../../../environments/environments';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthCognitoService {
 
-  private clientId = '7s6lqebt95v3tusphhogg6oajl';
-  private redirectUri = 'http://localhost:4200/';
-  private tokenUrl = 'https://auth.mobi-ai.com/oauth2/token';
+  // Utilizar las variables de entorno
+  private clientId = environment.clientId;
+  private redirectUri = environment.redirectUri;
+  private tokenUrl = environment.tokenUrl;
 
   constructor(private http: HttpClient) {}
 

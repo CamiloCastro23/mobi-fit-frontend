@@ -1,8 +1,53 @@
-<div class="w-full h-full grid grid-cols-6">
-  <!-- Columna 1, 2 -->
-  <div class="col-span-4 bg-red-500">Columna 1</div>
+<div class="px-52 py-20 w-full h-full grid grid-rows-5">
+  <!-- Fila 1 -->
+  <div class="row-span-2 my-2">
+    <div class="w-full h-full grid grid-cols-3">
+      <div class="col-span-2 bg-blue-500">Columna 1</div>
 
-  <!-- Columnas 3, 4 y 5 -->
-  <div class="col-span-2 bg-blue-500">Columnas 2, 3 y 4</div>
+      <div class="col-span-1 bg-red-500">Columna 1</div>
+    </div>
+  </div>
+
+  <!-- Fila 3 -->
+  <div class="flex row-span-1 my-2">
+    <div class="w-full h-full grid grid-cols-3 items-center">
+      <div class="col-span-1 flex justify-center items-center h-full">
+        <div class="w-11/12 h-full">
+          <app-stats-card
+          [icon]="cardItems[0].icon"
+          [title]="cardItems[0].title"
+          [value]="cardItems[0].value"
+          ></app-stats-card>
+        </div>
+      </div>
+      <div class="col-span-1 flex justify-center items-center h-full">
+        <div class="w-11/12 h-full">
+          <app-stats-card
+          [icon]="cardItems[1].icon"
+          [title]="cardItems[1].title"
+          [value]="cardItems[1].value"
+          ></app-stats-card>
+        </div>
+      </div>
+      <div class="col-span-1 flex justify-center items-center h-full">
+        <div class="w-11/12 h-full">
+          <app-stats-card
+          [icon]="cardItems[2].icon"
+          [title]="cardItems[2].title"
+          [value]="cardItems[2].value"
+          ></app-stats-card>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fila 4 -->
+  <div class="row-span-2 my-2">
+    <div class="w-full h-full grid grid-cols-3">
+      <div class="col-span-1 bg-blue-500">Columna 1</div>
+      <div class="col-span-1 bg-green-500">Columna 2</div>
+      <div class="col-span-1 bg-emerald-500">Columna 3</div>
+    </div>
+  </div>
 
 </div>

@@ -3,12 +3,25 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { AuthCognitoService } from '../../services/auth-cognito.service';
 import { environment } from '../../../../environments/environments';
 
+interface Item {
+  icon: string;
+  title: string;
+  value: string;
+}
+
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.css'
 })
 export class HomePageComponent {
+
+  cardItems: Item[] = [
+    { icon: 'guardian', title: 'Total Users', value: '160' },
+    { icon: 'speed', title: 'Mean - BMI', value: '25.8%' },
+    { icon: 'body_fat', title: 'Mean - Body Fat %', value: '18%' },
+  ];
+
   constructor(
     private route: ActivatedRoute,
     private router: Router,

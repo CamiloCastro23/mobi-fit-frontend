@@ -11,6 +11,7 @@ import { TutorialPageComponent } from './pages/tutorial-page/tutorial-page.compo
 import { SupportPageComponent } from './pages/support-page/support-page.component';
 import { SettingsPageComponent } from './pages/settings-page/settings-page.component';
 import { SharedModule } from '../shared/shared.module';
+import { StatsCardComponent } from './components/stats-card/stats-card.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { SharedModule } from '../shared/shared.module';
     WorkoutPageComponent,
     TutorialPageComponent,
     SupportPageComponent,
-    SettingsPageComponent
+    SettingsPageComponent,
+    StatsCardComponent
   ],
   imports: [
     CommonModule,

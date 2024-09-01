@@ -18,8 +18,8 @@ export class HomePageComponent {
 
   cardItems: Item[] = [
     { icon: 'guardian', title: 'Total Users', value: '160' },
-    { icon: 'speed', title: 'Mean - BMI', value: '25.8%' },
-    { icon: 'body_fat', title: 'Mean - Body Fat %', value: '18%' },
+    { icon: 'speed', title: 'BMI', value: '25.8%' },
+    { icon: 'body_fat', title: 'Body Fat %', value: '18%' },
   ];
 
   constructor(

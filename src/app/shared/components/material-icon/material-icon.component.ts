@@ -11,7 +11,7 @@ import { Component, Input } from '@angular/core';
         matTooltipPosition="right"
         aria-label="text">
         <span
-         class="material-symbols-rounded text-gray-600 text-4xl" translate="no"
+         class="material-symbols-rounded text-gray-600 text-4xl lg:text-5xl" translate="no"
          [ngClass]="{'text-black bg-sky-100 rounded-full': isSelected}"
          >{{ icon }}</span>
       </button>

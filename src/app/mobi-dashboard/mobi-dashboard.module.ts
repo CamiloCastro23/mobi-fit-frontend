@@ -12,6 +12,10 @@ import { SupportPageComponent } from './pages/support-page/support-page.componen
 import { SettingsPageComponent } from './pages/settings-page/settings-page.component';
 import { SharedModule } from '../shared/shared.module';
 import { StatsCardComponent } from './components/stats-card/stats-card.component';
+import { WelcomeCardComponent } from './components/welcome-card/welcome-card.component';
+import { ModuleCardComponent } from './components/module-card/module-card.component';
+import { InfoCardComponent } from './components/info-card/info-card.component';
+import { ClientCardComponent } from './components/client-card/client-card.component';
 
 
 @NgModule({
@@ -24,7 +28,11 @@ import { StatsCardComponent } from './components/stats-card/stats-card.component
     TutorialPageComponent,
     SupportPageComponent,
     SettingsPageComponent,
-    StatsCardComponent
+    StatsCardComponent,
+    WelcomeCardComponent,
+    ModuleCardComponent,
+    InfoCardComponent,
+    ClientCardComponent
   ],
   imports: [
     CommonModule,

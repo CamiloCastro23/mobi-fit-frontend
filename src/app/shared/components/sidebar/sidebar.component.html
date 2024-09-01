@@ -1,13 +1,12 @@
-<div class="flex flex-col relative overflow-y-auto border w-screen h-full md:w-20 border-r-slate-100 bg-white shadow-xl">
-  <!-- LOGO -->
-  <div class="flex h-16 py-4 shrink-0 justify-center mb-10">
-    <img class="h-12 w-auto" src="assets/mobi-logo.png" alt="Your Company">
+<div class="grid grid-rows-10 h-full w-full bg-white border border-r-slate-100 shadow-xl">
+  <div class="flex row-span-1 justify-center items-center">
+    <img class="h-2/3 w-2/4" src="assets/mobi-logo.png" alt="MOBI">
   </div>
-  <!-- MENU -->
-  <div class="flex py-4 px-5 shrink-0 justify-start md:justify-center">
+  <div class="row-span-1"></div>
+  <div class="row-span-8 flex flex-col items-center justify-between">
     <nav class="menu">
       <ul>
-        <li *ngFor="let item of menuItems" class="flex items-center justify-start py-2" (click)="selectItem(item)">
+        <li *ngFor="let item of menuItems" class="py-auto" (click)="selectItem(item)">
           <material-icon
             [icon]="item.icon"
             [routerLink]="item.url"
@@ -15,10 +14,12 @@
             [isSelected]="item === selectedItem">
           </material-icon>
         </li>
-        <div class="absolute bottom-0 flex items-center justify-start">
+        <div class="absolute bottom-0 flex items-center">
           <material-icon icon="logout" [routerLink]="'logout'" text="Logout"></material-icon>
         </div>
       </ul>
     </nav>
   </div>
 </div>
+<div>
+

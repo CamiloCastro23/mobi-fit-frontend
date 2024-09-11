@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-stats-card',
   template: `
-    <div class="relative bg-white shadow-lg rounded-2xl w-full h-full opacity-100 hover:opacity-70 transition-opacity duration-300">
+    <div class="relative bg-white shadow-lg rounded-2xl w-full h-full opacity-100 hover:opacity-70 transition-opacity duration-300 overflow-hidden">
       <div class="flex w-full h-3/5 p-4 space-x-4 items-center">
         <div class="bg-sky-400 rounded-xl w-16 h-16 flex items-center justify-center transition duration-500 hover:bg-sky-700">
           <span class="material-symbols-rounded text-white text-4xl custom-material-icons" translate="no">{{ icon }}</span>

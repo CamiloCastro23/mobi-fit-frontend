@@ -1,1 +1,120 @@
-<p>user-page works!</p>
+<div class="w-full h-full flex items-center justify-center p-6 bg-gray-100">
+  <!-- Contenedor de Cards alineados horizontalmente -->
+  <div class="w-full max-w-6xl h-full flex flex-row space-x-6">
+
+    <!-- Card 1: Crear Usuario -->
+    <div class="w-1/2 bg-white p-6 rounded-lg shadow-lg">
+      <h1 class="text-xl font-bold text-sky-600 mb-4">Crear Usuario</h1>
+
+      <form>
+        <div class="grid grid-cols-1 gap-4">
+          <!-- DNI -->
+          <div class="mb-4">
+            <label for="dni" class="block text-sm font-medium text-sky-600">DNI</label>
+            <input type="text" id="dni" class="mt-1 block w-full p-2 border border-sky-300 rounded-lg focus:ring-sky-600 focus:border-sky-600" placeholder="Ingrese su DNI">
+          </div>
+
+          <!-- Nombres -->
+          <div class="mb-4">
+            <label for="first-name" class="block text-sm font-medium text-sky-600">Nombres</label>
+            <input type="text" id="first-name" class="mt-1 block w-full p-2 border border-sky-300 rounded-lg focus:ring-sky-600 focus:border-sky-600" placeholder="Ingrese su nombre">
+          </div>
+
+          <!-- Apellidos -->
+          <div class="mb-4">
+            <label for="last-name" class="block text-sm font-medium text-sky-600">Apellidos</label>
+            <input type="text" id="last-name" class="mt-1 block w-full p-2 border border-sky-300 rounded-lg focus:ring-sky-600 focus:border-sky-600" placeholder="Ingrese sus apellidos">
+          </div>
+
+          <!-- Fecha de Nacimiento -->
+          <div class="mb-4">
+            <label for="birthdate" class="block text-sm font-medium text-sky-600">Fecha de Nacimiento</label>
+            <input type="date" id="birthdate" class="mt-1 block w-full p-2 border border-sky-300 rounded-lg focus:ring-sky-600 focus:border-sky-600">
+          </div>
+
+          <!-- Sexo -->
+          <div class="mb-4">
+            <label class="block text-sm font-medium text-sky-600">Sexo:</label>
+            <div class="flex space-x-4">
+              <label class="inline-flex items-center">
+                <input type="radio" name="gender" class="text-sky-600 focus:ring-sky-600" value="masculino">
+                <span class="ml-2">Masculino</span>
+              </label>
+              <label class="inline-flex items-center">
+                <input type="radio" name="gender" class="text-sky-600 focus:ring-sky-600" value="femenino">
+                <span class="ml-2">Femenino</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Número de Teléfono -->
+          <div class="mb-4">
+            <label for="phone" class="block text-sm font-medium text-sky-600">Número</label>
+            <input type="tel" id="phone" class="mt-1 block w-full p-2 border border-sky-300 rounded-lg focus:ring-sky-600 focus:border-sky-600" placeholder="Ingrese su número de teléfono">
+          </div>
+
+          <!-- Correo Electrónico -->
+          <div class="mb-4">
+            <label for="email" class="block text-sm font-medium text-sky-600">Correo Electrónico</label>
+            <input type="email" id="email" class="mt-1 block w-full p-2 border border-sky-300 rounded-lg focus:ring-sky-600 focus:border-sky-600" placeholder="Ingrese su correo">
+          </div>
+        </div>
+
+        <button class="bg-sky-600 text-white px-4 py-2 rounded-lg hover:bg-sky-700 mt-4">Crear</button>
+      </form>
+    </div>
+
+    <!-- Card 2: Crear Condición Física -->
+    <div class="w-1/2 bg-white p-6 rounded-lg shadow-lg">
+      <h1 class="text-xl font-bold text-sky-600 mb-4">Crear Condición Física</h1>
+
+      <form>
+        <div class="grid grid-cols-2 gap-4">
+          <!-- Peso -->
+          <div class="mb-4">
+            <label for="weight" class="block text-sm font-medium text-sky-600">Peso (kg)</label>
+            <input type="number" id="weight" class="mt-1 block w-full p-2 border border-sky-300 rounded-lg focus:ring-sky-600 focus:border-sky-600" placeholder="Ingrese su peso">
+          </div>
+
+          <!-- Altura -->
+          <div class="mb-4">
+            <label for="height" class="block text-sm font-medium text-sky-600">Altura (cm)</label>
+            <input type="number" id="height" class="mt-1 block w-full p-2 border border-sky-300 rounded-lg focus:ring-sky-600 focus:border-sky-600" placeholder="Ingrese su altura">
+          </div>
+
+          <!-- IMC -->
+          <div class="mb-4">
+            <label for="bmi" class="block text-sm font-medium text-sky-600">IMC</label>
+            <input type="number" id="bmi" class="mt-1 block w-full p-2 border border-sky-300 rounded-lg focus:ring-sky-600 focus:border-sky-600" placeholder="Ingrese su IMC">
+          </div>
+
+          <!-- % Grasa Corporal -->
+          <div class="mb-4">
+            <label for="body-fat" class="block text-sm font-medium text-sky-600">% Grasa Corporal</label>
+            <input type="number" id="body-fat" class="mt-1 block w-full p-2 border border-sky-300 rounded-lg focus:ring-sky-600 focus:border-sky-600" placeholder="Ingrese % de grasa corporal">
+          </div>
+
+          <!-- % Agua -->
+          <div class="mb-4">
+            <label for="water" class="block text-sm font-medium text-sky-600">% Agua</label>
+            <input type="number" id="water" class="mt-1 block w-full p-2 border border-sky-300 rounded-lg focus:ring-sky-600 focus:border-sky-600" placeholder="Ingrese % de agua corporal">
+          </div>
+
+          <!-- Masa Muscular -->
+          <div class="mb-4">
+            <label for="muscle-mass" class="block text-sm font-medium text-sky-600">Masa Muscular (kg)</label>
+            <input type="number" id="muscle-mass" class="mt-1 block w-full p-2 border border-sky-300 rounded-lg focus:ring-sky-600 focus:border-sky-600" placeholder="Ingrese masa muscular">
+          </div>
+
+          <!-- Masa Ósea -->
+          <div class="mb-4">
+            <label for="bone-mass" class="block text-sm font-medium text-sky-600">Masa Ósea (kg)</label>
+            <input type="number" id="bone-mass" class="mt-1 block w-full p-2 border border-sky-300 rounded-lg focus:ring-sky-600 focus:border-sky-600" placeholder="Ingrese masa ósea">
+          </div>
+        </div>
+
+        <button class="bg-sky-600 text-white px-4 py-2 rounded-lg hover:bg-sky-700 mt-4">Crear</button>
+      </form>
+    </div>
+  </div>
+</div>

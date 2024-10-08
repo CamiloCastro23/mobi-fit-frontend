@@ -16,6 +16,7 @@ export class AuthCognitoService {
   private tokenUrl = environment.tokenUrl;
   private jwksUrl = environment.jwksUrl;
   private location?: Location;
+  private logoutUrl = environment.logoutUrl;
 
   constructor(private http: HttpClient) { }
 
@@ -93,4 +94,14 @@ export class AuthCognitoService {
         });
     });
   }
+
+  logout(): void {
+    localStorage.removeItem('access_token');
+    localStorage.removeItem('id_token');
+    localStorage.removeItem('refresh_token');
+
+    window.location.href = this.logoutUrl;
+  }
+
+
 }

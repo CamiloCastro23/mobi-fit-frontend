@@ -7,26 +7,26 @@ import { Component, Input } from '@angular/core';
       <!-- Contenedor de texto -->
       <div class="flex flex-col justify-center bg-white px-8 py-32 lg:px-16 lg:py-48">
         <div class="text-center lg:text-left">
-          <h1 class="mt-4 text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl">{{ title }}</h1>
+          <h1 class="mt-4 text-5xl font-bold tracking-tight text-gray-900 sm:text-5xl">{{ title }}</h1>
           <p class="mt-6 text-xl leading-7 text-gray-600">We are working hard to bring you the best experience. Please check back soon!</p>
 
           <!-- Contenedor separado para el temporizador con translate="no" -->
           <div class="mt-10 flex items-center justify-center lg:justify-start gap-x-10">
             <!-- Etiquetas de tiempo -->
             <div class="text-center">
-              <div class="text-4xl font-semibold text-gray-700">"Days</div> <!-- Tamaño mayor para los títulos -->
+              <div class="text-4xl font-semibold text-gray-700 sm:text-2xl">"Days</div> <!-- Tamaño mayor para los títulos -->
               <div class="text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-sky-400 via-cyan-500 to-emerald-500" translate="no">{{ days }}</div> <!-- Números con degradado -->
             </div>
             <div class="text-center">
-              <div class="text-4xl font-semibold text-gray-700">Hours</div>
+              <div class="text-4xl font-semibold text-gray-700 sm:text-2xl">Hours</div>
               <div class="text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-sky-400 via-cyan-500 to-emerald-500" translate="no">{{ hours }}</div>
             </div>
             <div class="text-center">
-              <div class="text-4xl font-semibold text-gray-700">Minutes</div>
+              <div class="text-4xl font-semibold text-gray-700 sm:text-2xl">Minutes</div>
               <div class="text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-sky-400 via-cyan-500 to-emerald-500" translate="no">{{ minutes }}</div>
             </div>
             <div class="text-center">
-              <div class="text-4xl font-semibold text-gray-700">Seconds "</div>
+              <div class="text-4xl font-semibold text-gray-700 sm:text-2xl">Seconds "</div>
               <div class="text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-sky-400 via-cyan-500 to-emerald-500" translate="no">{{ seconds }}</div>
             </div>
           </div>

@@ -4,9 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-client-card',
   template: `
     <div class="relative flex flex-col items-center justify-center w-full h-full rounded-2xl bg-gray-700 text-slate-100 text-lg shadow-lg opacity-100 hover:opacity-90 transition-opacity duration-300">
-    <div class="absolute top-0 py-6">
-      Client: SmartFitCoach
-    </div>
       <img src="assets/SmartFitCoach.png" alt="">
     </div>
   `,

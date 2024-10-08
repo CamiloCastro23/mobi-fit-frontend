@@ -15,7 +15,7 @@
           </material-icon>
         </li>
         <div class="absolute bottom-0 flex items-center">
-          <material-icon icon="logout" [routerLink]="'logout'" text="Logout"></material-icon>
+          <material-icon icon="logout" (click)="logout()" text="Logout"></material-icon>
         </div>
       </ul>
     </nav>

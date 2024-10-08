@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthCognitoService } from '../../../mobi-dashboard/services/auth-cognito.service';
 
 interface Item {
   icon: string;
@@ -32,7 +33,9 @@ export class SidebarComponent {
   isMenuOpen = false;
   isLargeScreen = false;
 
-  constructor() {
+  constructor(
+    private authCognitoService: AuthCognitoService
+  ) {
     this.checkScreenSize();
     window.onresize = () => this.checkScreenSize();
   }
@@ -43,5 +46,9 @@ export class SidebarComponent {
 
   checkScreenSize() {
     this.isLargeScreen = window.innerWidth >= 768;
+  }
+
+  logout() {
+    this.authCognitoService.logout();
   }
 }

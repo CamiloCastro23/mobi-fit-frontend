@@ -5,6 +5,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { MaterialModule } from '../material/material.module';
 import { MaterialIconComponent } from './components/material-icon/material-icon.component';
 import { RouterModule } from '@angular/router';
+import { UnderConstructionPageComponent } from './pages/under-construction-page/under-construction-page.component';
 
 
 
@@ -12,7 +13,8 @@ import { RouterModule } from '@angular/router';
   declarations: [
     Error404Component,
     SidebarComponent,
-    MaterialIconComponent
+    MaterialIconComponent,
+    UnderConstructionPageComponent
   ],
   imports: [
     CommonModule,
@@ -21,7 +23,8 @@ import { RouterModule } from '@angular/router';
   ],
   exports: [
     Error404Component,
-    SidebarComponent
+    SidebarComponent,
+    UnderConstructionPageComponent
   ]
 })
 export class SharedModule { }

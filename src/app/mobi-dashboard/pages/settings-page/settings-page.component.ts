@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './settings-page.component.css'
 })
 export class SettingsPageComponent {
-
+  targetDate = new Date('2024-11-15');
+  title = 'Setting Module is Under Construction';
 }

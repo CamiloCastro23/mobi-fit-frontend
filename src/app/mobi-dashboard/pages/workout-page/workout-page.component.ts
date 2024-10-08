@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './workout-page.component.css'
 })
 export class WorkoutPageComponent {
-
+  targetDate = new Date('2024-12-11');
+  title = 'Workout Module is Under Construction';
 }

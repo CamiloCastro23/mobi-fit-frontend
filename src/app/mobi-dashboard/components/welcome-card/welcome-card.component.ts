@@ -19,7 +19,7 @@ import { Component } from '@angular/core';
           </h1>
           <img class="h-8 w-8 sm:h-12 sm:w-12" src="assets/mobi-logo.png" alt="Mobi Logo">
         </div>
-        <p class="mt-2 text-sm font-light text-white md:text-xl sm:leading-8">
+        <p class="mt-2 text-xl font-light text-white md:text-xl sm:leading-8">
           "Transform your health journey with Mobi - the ultimate app for creating personalized diets and workout plans, all powered by cutting-edge Artificial Intelligence"
         </p>
       </div>

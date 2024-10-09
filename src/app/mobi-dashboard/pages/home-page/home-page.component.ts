@@ -17,9 +17,9 @@ interface Item {
 export class HomePageComponent {
 
   cardItems: Item[] = [
-    { icon: 'guardian', title: 'Total Users', value: '160' },
+    { icon: 'guardian', title: 'Users', value: '160' },
     { icon: 'speed', title: 'BMI', value: '25.8%' },
-    { icon: 'body_fat', title: 'Body Fat %', value: '18%' },
+    { icon: 'body_fat', title: 'Body Fat', value: '18%' },
   ];
 
   constructor(

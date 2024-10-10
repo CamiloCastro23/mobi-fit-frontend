@@ -6,6 +6,7 @@ import { MaterialModule } from '../material/material.module';
 import { MaterialIconComponent } from './components/material-icon/material-icon.component';
 import { RouterModule } from '@angular/router';
 import { UnderConstructionPageComponent } from './pages/under-construction-page/under-construction-page.component';
+import { TopbarComponent } from './components/topbar/topbar.component';
 
 
 
@@ -14,7 +15,8 @@ import { UnderConstructionPageComponent } from './pages/under-construction-page/
     Error404Component,
     SidebarComponent,
     MaterialIconComponent,
-    UnderConstructionPageComponent
+    UnderConstructionPageComponent,
+    TopbarComponent
   ],
   imports: [
     CommonModule,
@@ -24,7 +26,8 @@ import { UnderConstructionPageComponent } from './pages/under-construction-page/
   exports: [
     Error404Component,
     SidebarComponent,
-    UnderConstructionPageComponent
+    UnderConstructionPageComponent,
+    TopbarComponent
   ]
 })
 export class SharedModule { }

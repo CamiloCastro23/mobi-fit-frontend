@@ -1,0 +1,58 @@
+<div class="flex flex-col h-full w-full p-1 rounded-lg shadow-xl bg-white px-4">
+  <div class="flex flex-col w-full items-center justify-center">
+    <div class="text-lg xl:text-xl font-sans font-semibold text-sky-500 my-6">
+      Users Table
+    </div>
+  </div>
+
+  <div class="h-5/6 w-full overflow-auto custom-scrollbar border border-gray-100 rounded-lg">
+    <table class="w-full table-auto text-sm">
+      <thead class="bg-sky-100">
+        <tr>
+          <th class="px-2 py-1 text-center">Name</th>
+          <th class="px-2 py-1 text-center">Sex</th>
+          <th class="px-2 py-1 text-center">ID & Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users; let i = index"
+            [ngClass]="{ 'bg-white': i % 2 === 0, 'bg-gray-100': i % 2 !== 0 }"
+            class="border-b hover:bg-sky-50">
+          <td class="px-1 py-1">
+            <div class="flex flex-col text-center">
+              <span class="font-medium">{{ user.firstname }} {{ user.lastname }}</span>
+              <span class="text-xs text-gray-500">{{ user.email }}</span>
+            </div>
+          </td>
+          <td class="px-1 py-1 text-center">
+            <div class="flex items-center justify-center space-x-2">
+              <!-- Círculo de color para indicar el sexo -->
+              <div
+                class="flex-none rounded-full p-1"
+                [ngClass]="{
+                  'bg-sky-500/10 text-sky-500': (user.sex | initials) === 'M',
+                  'bg-pink-500/10 text-pink-500': (user.sex | initials) === 'F'
+                }"
+              >
+                <div class="h-1.5 w-1.5 rounded-full bg-current"></div>
+              </div>
+              <!-- Texto que muestra solo la inicial de `user.sex` -->
+              <span translate="no">{{ user.sex | initials }}</span>
+            </div>
+          </td>
+          <td class="px-1 py-1">
+            <div class="flex flex-col text-center">
+              <span class="font-medium">{{ user.id }}</span>
+              <span class="text-xs text-gray-500">{{ user.creationdate | dateFormat }}</span>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="h-1/6 w-full flex items-center justify-center">
+    <!-- Aquí puedes agregar la lógica para la paginación -->
+    <span class="text-xs">pagination</span>
+  </div>
+</div>

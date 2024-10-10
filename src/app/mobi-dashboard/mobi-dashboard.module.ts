@@ -16,6 +16,9 @@ import { WelcomeCardComponent } from './components/welcome-card/welcome-card.com
 import { ModuleCardComponent } from './components/module-card/module-card.component';
 import { InfoCardComponent } from './components/info-card/info-card.component';
 import { ClientCardComponent } from './components/client-card/client-card.component';
+import { TableUsersComponent } from './components/table-users/table-users.component';
+import { InitialsPipe } from './pipes/initials.pipe';
+import { DateFormatPipe } from './pipes/date-format.pipe';
 
 
 @NgModule({
@@ -32,7 +35,10 @@ import { ClientCardComponent } from './components/client-card/client-card.compon
     WelcomeCardComponent,
     ModuleCardComponent,
     InfoCardComponent,
-    ClientCardComponent
+    ClientCardComponent,
+    TableUsersComponent,
+    InitialsPipe,
+    DateFormatPipe
   ],
   imports: [
     CommonModule,

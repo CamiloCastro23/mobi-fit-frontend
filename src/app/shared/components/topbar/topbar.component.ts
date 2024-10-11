@@ -32,21 +32,24 @@ export class TopbarComponent implements OnInit {
   userEmail: string | null = '';
 
   ngOnInit() {
-    this.decodeToken();
+    this.decodeTokenWithDelay();
   }
 
-  decodeToken() {
-    const token = localStorage.getItem('id_token');
-    if (token) {
-      try {
-        const decodedToken: any = jwtDecode(token);
-        this.userEmail = decodedToken.email || 'No email found';
-      } catch (error) {
-        console.error('Error decoding token:', error);
-        this.userEmail = 'Invalid token';
+  decodeTokenWithDelay() {
+    setTimeout(() => {
+      const token = localStorage.getItem('id_token');
+      console.log('Token:', token);
+      if (token) {
+        try {
+          const decodedToken: any = jwtDecode(token);
+          this.userEmail = decodedToken.email || 'No email found';
+        } catch (error) {
+          console.error('Error decoding token:', error);
+          this.userEmail = 'Invalid token';
+        }
+      } else {
+        this.userEmail = 'Token not found';
       }
-    } else {
-      this.userEmail = 'Token not found';
-    }
+    }, 3000);
   }
 }

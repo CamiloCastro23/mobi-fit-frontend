@@ -24,7 +24,6 @@ export class HomePageComponent {
 
   constructor(
     private route: ActivatedRoute,
-    private router: Router,
     private authService: AuthCognitoService
   ) { }
 

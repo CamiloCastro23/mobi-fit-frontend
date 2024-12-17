@@ -38,7 +38,6 @@ export class TopbarComponent implements OnInit {
   decodeTokenWithDelay() {
     setTimeout(() => {
       const token = localStorage.getItem('id_token');
-      console.log('Token:', token);
       if (token) {
         try {
           const decodedToken: any = jwtDecode(token);

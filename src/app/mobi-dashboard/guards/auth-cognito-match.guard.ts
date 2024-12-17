@@ -6,7 +6,6 @@ import { environment } from '../../../environments/environments';
 
 export const authCognitoMatchGuard: CanMatchFn = (route, segments) => {
   const authService = inject(AuthCognitoService);
-  const router = inject(Router);
 
   return authService.checkAuth().pipe(
     map(isAuthenticated => {
